@@ -22,8 +22,8 @@
 >     *   *说明：数据集本身是免费开源的。但由于国内网络环境下载困难，我在资源包中免费提供了已整理好的数据集压缩包，方便大家直接使用。*
 >
 > **📥 立即获取资源包：**
-> *   🍞 **面包多**：[点击购买](https://mbd.pub/o/bread/YZWck5Zraw==)（**1.8折优惠**）
-> *   🐟 **闲鱼**：[点击购买](https://m.tb.cn/h.iS4bKNr?tk=TghJ50rNDBp)（**2折优惠**）
+> *   🍞 **面包多**：[点击购买](https://mbd.pub/o/bread/YZWclZxwZQ==)（**8.5折优惠**）
+> *   🐟 **闲鱼**：[点击购买](https://m.tb.cn/h.ilbGNNA?tk=cNwl53farwu)
 
 ---
 
@@ -46,7 +46,7 @@
 >
 > | 哔哩哔哩 (Bilibili) | 抖音 (Douyin) | 小红书 (Xiaohongshu) | 快手 (Kuaishou) |
 > | :---: | :---: | :---: | :---: |
-> | [![Bilibili](https://img.shields.io/badge/Bilibili-演示视频-pink?style=for-the-badge&logo=bilibili)](https://www.bilibili.com/video/BV1LfQUBZE4i/) | [![抖音](https://img.shields.io/badge/抖音-演示视频-black?style=for-the-badge&logo=tiktok)](https://v.douyin.com/0GHo9qVHCPc/) | [![Xiaohongshu](https://img.shields.io/badge/小红书-演示视频-red?style=for-the-badge&logo=xiaohongshu)](https://www.xiaohongshu.com/discovery/item/69c3d936000000001a030e7f?source=webshare&xhsshare=pc_web&xsec_token=YBeKvnnbW_VKd4i5WOVLRhWPYfNjyBq-0BCihcx_2nRd4=&xsec_source=pc_share) | [![Kuaishou](https://img.shields.io/badge/快手-演示视频-green?style=for-the-badge&logo=kuaishou)](https://www.kuaishou.com/f/X-38LoHLZ2pQOz3E) |
+> | [![Bilibili](https://img.shields.io/badge/Bilibili-演示视频-pink?style=for-the-badge&logo=bilibili)](https://www.bilibili.com/video/BV1WTSSBvE2m/) | [![抖音](https://img.shields.io/badge/抖音-演示视频-black?style=for-the-badge&logo=tiktok)](https://v.douyin.com/MpTXF1W5Lcs/) | [![Xiaohongshu](https://img.shields.io/badge/小红书-演示视频-red?style=for-the-badge&logo=xiaohongshu)](https://www.xiaohongshu.com/discovery/item/69d218e3000000001d01a7e4?source=webshare&xhsshare=pc_web&xsec_token=YB-DD-ndtKIY-3EhAZRrsqjYJ3NPNJvbs19GI6MqCpd-w=&xsec_source=pc_share) | [![Kuaishou](https://img.shields.io/badge/快手-演示视频-green?style=for-the-badge&logo=kuaishou)](https://www.kuaishou.com/f/X-8FnYzlre3QXvI5) |
 
 
 ---
@@ -208,8 +208,8 @@ YOLO_Mask_Wearing_detection/
 > 3.  **（赠品）数据集**：整理好的 Ultralytics 开源数据集压缩包。
 >
 > **📥 立即获取资源包：**
-> *   🍞 **面包多**：[点击购买](https://mbd.pub/o/bread/YZWck5Zraw==)（**1.8折优惠**）
-> *   🐟 **闲鱼**：[点击购买](https://m.tb.cn/h.iS4bKNr?tk=TghJ50rNDBp)（**2折优惠**）
+> *   🍞 **面包多**：[点击购买](https://mbd.pub/o/bread/YZWclZxwZQ==)（**8.5折优惠**）
+> *   🐟 **闲鱼**：[点击购买](https://m.tb.cn/h.ilbGNNA?tk=cNwl53farwu)
 
 > ---
 
