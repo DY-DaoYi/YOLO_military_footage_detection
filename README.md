@@ -24,6 +24,8 @@
 > **📥 立即获取资源包：**
 > *   🍞 **面包多**：[点击购买](https://mbd.pub/o/bread/YZWclZxwZQ==)（**8.5折优惠**）
 > *   🐟 **闲鱼**：[点击购买](https://m.tb.cn/h.ilbGNNA?tk=cNwl53farwu)
+>
+> （推荐使用面包多，8.5折优惠且自动发货）
 
 ---
 
@@ -210,6 +212,8 @@ YOLO_Mask_Wearing_detection/
 > **📥 立即获取资源包：**
 > *   🍞 **面包多**：[点击购买](https://mbd.pub/o/bread/YZWclZxwZQ==)（**8.5折优惠**）
 > *   🐟 **闲鱼**：[点击购买](https://m.tb.cn/h.ilbGNNA?tk=cNwl53farwu)
+>
+> （推荐使用面包多，8.5折优惠且自动发货）
 
 > ---
 
