@@ -50,7 +50,7 @@ python train.py --model yolo11s.pt --epochs 50 --batch 32 --device 0
 
 ```bash
 # 从上次中断的地方继续训练
-python train.py --model runs/train/Mask_Wearing/yolo11s_mask_wearing/weights/last.pt --resume
+python train.py --model runs/train/military_footage_recognition/yolo11s_military_footage/weights/last.pt --resume
 ```
 
 ### 3.2 批量训练 (`train_batch.py`)
@@ -91,7 +91,7 @@ python train_batch.py --epochs 10
 
 ### 4.3 各模型训练结果
 
-每个模型的训练结果保存在 `runs/train/{data_name}/{model_name}_mask_wearing/` 目录下：
+每个模型的训练结果保存在 `runs/train/{data_name}/{model_name}_military_footage/` 目录下：
 
 | 文件名 | 说明 |
 |--------|------|
@@ -110,7 +110,7 @@ python train_batch.py --epochs 10
     *   A: 减小 `--imgsz` 参数的值（例如从 640 改为 416）。
 
 *   **Q: 训练结果保存在哪里？**
-    *   A: 默认保存在 `runs/train/` 目录下。每个实验会根据模型名称生成一个子文件夹，例如 `runs/train/Mask_Wearing/yolo11s_mask_wearing`。
+    *   A: 默认保存在 `runs/train/` 目录下。每个实验会根据模型名称生成一个子文件夹，例如 `runs/train/military_footage_recognition/yolo11s_military_footage`。
 
 *   **Q: 如何查看训练过程的可视化图表？**
     *   A: Ultralytics 会在 `runs/train/xxx/` 目录下自动生成 `results.png` 等图表。
@@ -126,7 +126,7 @@ python train_batch.py --epochs 10
 | 参数 | 默认值 | 说明 |
 | :--- | :--- | :--- |
 | `--model` | `yolov8n.pt` | 模型权重文件路径或名称 |
-| `--data` | `../data/Mask_Wearing/data.yaml` | 数据集配置文件路径 |
+| `--data` | `../data/military_footage_recognition/data.yaml` | 数据集配置文件路径 |
 | `--epochs` | `100` | 训练总轮数 |
 | `--batch` | `-1` | 批次大小 (`-1` 表示自动批量大小) |
 | `--imgsz` | `640` | 输入图片尺寸 |
@@ -137,16 +137,20 @@ python train_batch.py --epochs 10
 
 ## 7. 数据集说明
 
-本项目使用 Roboflow 开源口罩佩戴数据集，包含 2 类佩戴状态：
+本项目使用 Roboflow 开源军事影像数据集，包含 6 类检测目标：
 
 | 英文名 | 中文名 |
 |--------|--------|
-| mask | 佩戴口罩 |
-| no-mask | 未佩戴口罩 |
+| car | 汽车 |
+| explosion | 爆炸 |
+| military_truck | 军用卡车 |
+| military_vehicle | 军用车辆 |
+| person | 人员 |
+| truck | 卡车 |
 
 数据集目录结构：
 ```
-data/Mask_Wearing/
+data/military_footage_recognition/
 ├── train/images/      # 训练集图片
 ├── train/labels/      # 训练集标签
 ├── valid/images/      # 验证集图片

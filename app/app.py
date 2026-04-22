@@ -14,8 +14,8 @@ import report_gen # 导入自定义 PDF 生成模块
 
 # 设置页面配置
 st.set_page_config(
-    page_title="基于YOLO的佩戴口罩检测系统",
-    page_icon="😷",
+    page_title="基于YOLO的军事影像检测系统",
+    page_icon="🪖",
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -35,10 +35,14 @@ st.markdown("""
     </style>
     """, unsafe_allow_html=True)
 
-# 类别名称映射 (2种口罩佩戴状态)
+# 类别名称映射 (军事影像检测 6 类)
 CLASS_NAME_MAP = {
-    "mask": "佩戴口罩",
-    "no-mask": "未佩戴口罩"
+    "car": "汽车",
+    "explosion": "爆炸",
+    "military_truck": "军用卡车",
+    "military_vehicle": "军用车辆",
+    "person": "人员",
+    "truck": "卡车",
 }
 
 def get_cn_name(name):
@@ -126,7 +130,7 @@ conf_thres = st.sidebar.slider("置信度阈值 (Confidence)", 0.0, 1.0, 0.25, 0
 iou_thres = st.sidebar.slider("IOU 阈值", 0.0, 1.0, 0.45, 0.05)
 
 # 主要内容
-st.title("😷 基于YOLO的佩戴口罩检测系统")
+st.title("🪖 基于YOLO的军事影像检测系统")
 st.markdown("### 🚀 支持 YOLOv8 / YOLO11 / YOLO26")
 
 tab1, tab2, tab3, tab4 = st.tabs(["🔍 单张图片/视频检测", "WB 批量检测 & 报告", "📊 模型性能对比", "ℹ️ 项目说明"])
@@ -181,7 +185,7 @@ with tab1:
                                 conf = float(box.conf[0])
                                 name = model.names[cls]
                                 cn_name = get_cn_name(name)
-                                data.append({"佩戴状态": cn_name, "置信度": f"{conf:.2f}"})
+                                data.append({"目标类别": cn_name, "置信度": f"{conf:.2f}"})
                             
                             st.table(pd.DataFrame(data))
                         else:
@@ -392,9 +396,9 @@ with tab2:
                     total_class_counts[cls] = total_class_counts.get(cls, 0) + cnt
 
         if total_class_counts:
-            st.subheader("😷 各类别佩戴状态统计")
+            st.subheader("🪖 各类别目标统计")
             class_stats_df = pd.DataFrame([
-                {"佩戴状态": cls, "检测数量": cnt} for cls, cnt in sorted(total_class_counts.items(), key=lambda x: x[1], reverse=True)
+                {"目标类别": cls, "检测数量": cnt} for cls, cnt in sorted(total_class_counts.items(), key=lambda x: x[1], reverse=True)
             ])
             st.dataframe(class_stats_df)
 
@@ -589,11 +593,11 @@ with tab4:
     st.markdown("""
     ## 📚 项目说明
 
-    本项目是基于 **YOLO (You Only Look Once)** 系列模型的佩戴口罩检测系统，专为识别是否佩戴口罩而设计。
+    本项目是基于 **YOLO (You Only Look Once)** 系列模型的**军事影像检测系统**，用于识别军事场景影像中的典型目标（如人员、车辆、军用车辆、爆炸等）。
 
     ### ✨ 主要功能
     - **多模型兼容**: 无缝支持 YOLOv8, YOLO11, 以及最新的 YOLO26 模型。
-    - **高精度实时检测**: 针对口罩佩戴状态进行了深度优化和专门训练，支持图片和视频的快速检测。
+    - **高精度实时检测**: 针对军事影像数据集进行了训练与优化，支持图片和视频的快速检测。
     - **批量处理与报告生成**: 支持一次性导入多张图片进行批量检测，并能一键生成详细的 PDF 统计报告，方便存档和分析。
     - **模型性能可视化对比**: 内置训练结果分析模块，直观对比不同模型的 mAP、Loss 等关键指标，辅助选择最佳模型。
 

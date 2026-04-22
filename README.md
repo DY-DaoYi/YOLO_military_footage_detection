@@ -1,24 +1,24 @@
-# 😷 基于 YOLO 的佩戴口罩检测系统 (Mask Wearing Detection System)
+# 🪖 基于 YOLO 的军事影像检测系统 (Military Footage Detection System)
 
 ![Python](https://img.shields.io/badge/Python-3.11.15-blue)
 ![Streamlit](https://img.shields.io/badge/Streamlit-1.55.0-red)
 ![YOLO](https://img.shields.io/badge/YOLO-v8%20%7C%20v11%20%7C%20v26-green)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 
-本项目是一个功能完整的佩戴口罩智能检测系统。基于最新的 Ultralytics YOLO 系列模型构建，能够识别是否佩戴口罩。本项目提供了美观、易用的 Streamlit Web 交互界面，非常适合作为**本科毕业设计**的参考与展示。
+本项目是一个功能完整的军事影像智能检测系统。基于最新的 Ultralytics YOLO 系列模型构建，能够识别军事场景影像中的典型目标（如人员、车辆、军用车辆、爆炸等）。本项目提供了美观、易用的 Streamlit Web 交互界面，非常适合作为**本科毕业设计**的参考与展示。
 
 > **⚠️ 关于本项目 (About This Project)**
 >
 > 本仓库**开源了系统的前端交互应用（App）源码及训练数据可视化模块**。
 >
 > **🔗 开源地址**：
-> *   **Gitee**：[点击访问](https://gitee.com/DY_DaoYi/YOLO_Mask_Wearing_detection)
-> *   **GitHub**：[点击访问](https://github.com/DY-DaoYi/YOLO_Mask_Wearing_detection)
+> *   **Gitee**：[点击访问](https://gitee.com/DY_DaoYi/YOLO_military_footage_detection)
+> *   **GitHub**：[点击访问](https://github.com/DY-DaoYi/YOLO_military_footage_detection)
 >
 > **🛒 核心模型与训练源码资源包 (Core Models & Training Codes) 包含：**
 > 1.  **核心训练代码**：包含 **train.py (单模型)** 和 **train_batch.py (批量实验)**，支持断点续训和自动批量大小（autobatch），训练完成后自动生成 GPU 耗时、成本估算和 mAP 评估报告。
 > 2.  **全系列模型权重与训练日志**：包含 **YOLOv8 / YOLO11 / YOLO26** 三个系列的 `best.pt` 模型文件，以及完整的训练日志、Loss 曲线图、mAP 指标图和混淆矩阵等评估图表，直接用于论文插图。
-> 3.  **（赠品）数据集**：本项目使用 [Roboflow Mask Wearing Dataset](https://universe.roboflow.com/joseph-nelson/mask-wearing/dataset/19) 的开源数据集。
+> 3.  **（赠品）数据集**：本项目使用 [Roboflow Military Footage Recognition Dataset](https://universe.roboflow.com/magisterka-gdfg0/military_footage_recognition/dataset/7) 的开源数据集。
 >     *   *说明：数据集本身是免费开源的。但由于国内网络环境下载困难，我在资源包中免费提供了已整理好的数据集压缩包，方便大家直接使用。*
 >
 > **📥 立即获取资源包：**
@@ -36,7 +36,7 @@
 *   **📦 批量处理引擎**: 针对大量数据，提供批量检测功能。系统会自动统计各类别数量，并生成包含详细信息的 CSV 表格。
 *   **📑 自动报告生成**: 一键生成专业的 PDF 检测报告，包含检测综述、类别统计和样张展示，可直接用于作业或汇报。
 *   **📊 训练可视化**: 独家内置**模型性能对比面板**。无需手动绘制，系统自动解析训练日志，生成专业的 mAP 和 Loss 对比图，助你轻松完成毕设论文的实验分析章节。
-*   **🇨🇳 全中文支持**: 从界面菜单到检测框标签（如"佩戴口罩"、"未佩戴口罩"等状态），全部采用中文显示，符合国内用户习惯。
+*   **🇨🇳 全中文支持**: 从界面菜单到检测框标签（如"人员"、"军用车辆"、"爆炸"等目标），全部采用中文显示，符合国内用户习惯。
 
 ---
 
@@ -125,7 +125,7 @@
 
 ### 第二阶段：加载模型（开启检测功能）
 
-为了让系统能够识别佩戴口罩状态，你需要加载训练好的 YOLO 模型文件（`.pt`）。
+为了让系统能够识别军事影像中的目标，你需要加载训练好的 YOLO 模型文件（`.pt`）。
 
 #### 🅰️ 如果你购买了资源包 (推荐)
 资源包中已包含 **YOLOv8 / YOLO11 / YOLO26** 全系列训练好的高精度模型。
@@ -136,7 +136,7 @@
 #### 🅱️ 如果你自己训练模型
 如果你自行训练了模型：
 1.  **新建文件夹**：在项目根目录下创建一个名为 `models` 的文件夹。
-2.  **放置模型**：将你训练得到的 `best.pt` 文件复制到 `models/` 文件夹中（建议重命名为清晰的名称，如 `yolo11m_mask_wearing.pt`）。
+2.  **放置模型**：将你训练得到的 `best.pt` 文件复制到 `models/` 文件夹中（建议重命名为清晰的名称，如 `yolo11m_military_footage.pt`）。
 3.  **完成**：刷新网页，即可在侧边栏选择你的模型进行检测。
 
 > 📖 **详细训练教程**: 如果你想自己训练模型，请查看 [训练指南](training/README.md)
@@ -146,13 +146,13 @@
 ## 📂 项目结构 (Project Structure)
 
 ```text
-YOLO_Mask_Wearing_detection/
+YOLO_military_footage_detection/
 ├── app/
 │   ├── app.py          # Streamlit 系统主入口
 │   ├── analysis.py     # 训练日志分析与绘图模块
 │   └── report_gen.py   # PDF 报告生成模块
 ├── data/               # 训练数据集 (Images/Labels)
-│   └── Mask_Wearing/   # 佩戴口罩数据集 (2类)
+│   └── military_footage_recognition/   # 军事影像数据集 (6类)
 ├── models/              # 训练好的模型文件 (.pt)
 ├── training/            # 模型训练代码
 │   ├── train.py         # 单模型训练脚本
@@ -166,22 +166,26 @@ YOLO_Mask_Wearing_detection/
 
 ## 📊 数据集信息 (Dataset Information)
 
-本项目使用 [Roboflow Mask Wearing Dataset](https://universe.roboflow.com/joseph-nelson/mask-wearing/dataset/19) 开源数据集，主要用于检测**佩戴口罩状态**。
+本项目使用 [Roboflow Military Footage Recognition Dataset](https://universe.roboflow.com/magisterka-gdfg0/military_footage_recognition/dataset/7) 开源数据集，主要用于检测**军事影像目标**。
 
 ### 😷 类别信息
 
 | 英文名 | 中文名 |
 |--------|--------|
-| mask | 佩戴口罩 |
-| no-mask | 未佩戴口罩 |
+| car | 汽车 |
+| explosion | 爆炸 |
+| military_truck | 军用卡车 |
+| military_vehicle | 军用车辆 |
+| person | 人员 |
+| truck | 卡车 |
 
 ### 📷 图片数量
 
 | 数据集 | 图片数量 |
 |--------|----------|
-| 训练集 | 1366 张 |
-| 验证集 | 368 张 |
-| 测试集 | 200 张 |
+| 训练集 | 15126 张 |
+| 验证集 | 1002 张 |
+| 测试集 | 105 张 |
 
 > **💡 说明**：数据集本身是免费开源的。但由于国内网络环境下载困难，资源包中免费提供了已整理好的数据集压缩包，方便大家直接使用。
 
@@ -198,9 +202,9 @@ YOLO_Mask_Wearing_detection/
     *   **模型数量**: 15 个模型 (YOLOv8/11/26 系列 x n/s/m/l/x 五种规格)
     *   **训练轮数**: 100 Epochs / 模型
 3.  **实际耗时与成本**:
-    *   *总耗时*: 6 小时 7 分 (约 6.13 小时)
+    *   *总耗时*: 74 小时 20 分 (约 74.34 小时)
     *   *云服务器费率*: ¥9.35 / 小时
-    *   **总算力成本**: **6.13 小时 x ¥9.35 ≈ ¥57.31**
+    *   **总算力成本**: **74.34 小时 x ¥9.35 ≈ ¥695.07**
 
 > **💡 省钱建议**: 自己租用服务器复现所有实验不仅耗时耗力，且算力成本往往高于直接获取成品。
 >

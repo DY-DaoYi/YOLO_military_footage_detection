@@ -64,14 +64,14 @@ def generate_pdf_report(summary_data, detail_data, output_path):
     )
 
     # 1. 标题页
-    elements.append(Paragraph("佩戴口罩检测报告", title_style))
+    elements.append(Paragraph("军事影像检测报告", title_style))
     elements.append(Paragraph(f"生成时间: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}", normal_style))
     elements.append(Spacer(1, 20))
     
     # 2. 摘要部分
     elements.append(Paragraph("一、检测概览", header_style))
 
-    total_label = summary_data.get('total_label', '情绪总数')
+    total_label = summary_data.get('total_label', '目标总数')
     summary_table_data = [
         ["检测模型", summary_data.get('model', 'N/A')],
         ["处理文件数", str(summary_data.get('total_files', 0))],
@@ -98,8 +98,8 @@ def generate_pdf_report(summary_data, detail_data, output_path):
                 total_class_counts[cls] = total_class_counts.get(cls, 0) + cnt
 
     if total_class_counts:
-        elements.append(Paragraph("二、各类别佩戴状态统计", header_style))
-        class_stats_data = [["佩戴状态", "检测数量"]]
+        elements.append(Paragraph("二、各类别目标统计", header_style))
+        class_stats_data = [["目标类别", "检测数量"]]
         for cls, cnt in sorted(total_class_counts.items(), key=lambda x: x[1], reverse=True):
             class_stats_data.append([cls, str(cnt)])
 
