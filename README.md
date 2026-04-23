@@ -13,7 +13,7 @@ License
 >
 > **🔗 开源地址**：
 >
-> - **Gitee**：[点击访问](https://gitee.com/DY_DaoYi/YOLO_military_footage_detection)
+> - **GitCode**：[点击访问](https://gitcode.com/DY-DaoYi/YOLO_military_footage_detection)
 > - **GitHub**：[点击访问](https://github.com/DY-DaoYi/YOLO_military_footage_detection)
 >
 > **🛒 核心模型与训练源码资源包 (Core Models & Training Codes) 包含：**
