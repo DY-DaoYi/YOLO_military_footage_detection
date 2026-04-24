@@ -1,8 +1,8 @@
 # 🪖 基于 YOLO 的军事影像检测系统 (Military Footage Detection System)
 
-Python
-Streamlit
-YOLO
+![Python](https://img.shields.io/badge/Python-3.11.15-blue)
+![Streamlit](https://img.shields.io/badge/Streamlit-1.55.0-red)
+![YOLO](https://img.shields.io/badge/YOLO-v8%20%7C%20v11%20%7C%20v26-green)
 
 本项目是一个功能完整的军事影像智能检测系统。基于最新的 Ultralytics YOLO 系列模型构建，能够识别军事场景影像中的典型目标（如人员、车辆、军用车辆、爆炸等）。本项目提供了美观、易用的 Streamlit Web 交互界面，非常适合同学们参考与展示。
 
