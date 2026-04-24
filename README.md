@@ -3,7 +3,6 @@
 Python
 Streamlit
 YOLO
-License
 
 本项目是一个功能完整的军事影像智能检测系统。基于最新的 Ultralytics YOLO 系列模型构建，能够识别军事场景影像中的典型目标（如人员、车辆、军用车辆、爆炸等）。本项目提供了美观、易用的 Streamlit Web 交互界面，非常适合作为**本科毕业设计**的参考与展示。
 
